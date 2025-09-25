@@ -1,0 +1,97 @@
+/*
+Theme Name: AIFirstMovers Block Theme
+Description: Custom block theme for AIFirstMovers.net with full site editing support
+Author: AIFirstMovers Team
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.4
+Requires PHP: 8.0
+Text Domain: aifm-block
+*/
+
+/* Additional custom styles for the block theme */
+body {
+    font-family: var(--wp--preset--font-family--system-font);
+    line-height: 1.6;
+    color: var(--wp--preset--color--dark-gray);
+}
+
+/* Custom styles for specific blocks */
+.wp-block-group.has-background {
+    padding: var(--wp--preset--spacing--medium);
+}
+
+.wp-block-columns {
+    gap: var(--wp--preset--spacing--medium);
+}
+
+/* Header customizations */
+.wp-site-blocks > header {
+    border-bottom: 1px solid var(--wp--preset--color--light-gray);
+    padding: var(--wp--preset--spacing--small) 0;
+}
+
+/* Footer customizations */
+.wp-site-blocks > footer {
+    border-top: 1px solid var(--wp--preset--color--light-gray);
+    background-color: var(--wp--preset--color--light-gray);
+    padding: var(--wp--preset--spacing--large) 0;
+    margin-top: var(--wp--preset--spacing--large);
+}
+
+/* Custom block patterns */
+.aifm-hero-section {
+    background: linear-gradient(135deg, var(--wp--preset--color--primary), var(--wp--preset--color--secondary));
+    color: var(--wp--preset--color--white);
+    padding: var(--wp--preset--spacing--x-large) var(--wp--preset--spacing--medium);
+    text-align: center;
+}
+
+.aifm-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--wp--preset--spacing--medium);
+    margin: var(--wp--preset--spacing--large) 0;
+}
+
+.aifm-cta-section {
+    background-color: var(--wp--preset--color--accent);
+    color: var(--wp--preset--color--white);
+    padding: var(--wp--preset--spacing--large);
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .aifm-hero-section {
+        padding: var(--wp--preset--spacing--large) var(--wp--preset--spacing--small);
+    }
+    
+    .aifm-feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Accessibility improvements */
+.wp-block-button__link:focus,
+.wp-block-button__link:focus-visible {
+    outline: 2px solid var(--wp--preset--color--accent);
+    outline-offset: 2px;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    z-index: 999999;
+    padding: 8px 16px;
+    background: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--white);
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    left: 6px;
+    top: 7px;
+}

@@ -1,0 +1,66 @@
+/*
+Theme Name: AIFirstMovers Block Theme
+Description: Block-based theme for AIFirstMovers.net
+Author: AIFirstMovers Team
+Version: 1.0.0
+Text Domain: aifm-block
+Requires at least: 6.6
+Requires PHP: 8.1
+*/
+
+
+
+/* Custom styles for AIFirstMovers.net */
+:root {
+    --aifm-primary-color: #007cba;
+    --aifm-secondary-color: #50c878;
+    --aifm-accent-color: #ff6b35;
+    --aifm-text-color: #333333;
+    --aifm-light-gray: #f5f5f5;
+    --aifm-dark-gray: #666666;
+}
+
+/* Site branding customizations */
+.site-header {
+    padding: 1rem 0;
+}
+
+.site-title a {
+    color: var(--aifm-primary-color);
+    text-decoration: none;
+}
+
+.site-title a:hover {
+    color: var(--aifm-secondary-color);
+}
+
+/* Button styles */
+.wp-block-button__link {
+    background-color: var(--aifm-primary-color);
+    border-color: var(--aifm-primary-color);
+}
+
+.wp-block-button__link:hover {
+    background-color: var(--aifm-secondary-color);
+    border-color: var(--aifm-secondary-color);
+}
+
+/* Content area */
+.entry-content h1,
+.entry-content h2,
+.entry-content h3 {
+    color: var(--aifm-text-color);
+}
+
+/* Footer customizations */
+.site-footer {
+    background-color: var(--aifm-light-gray);
+    padding: 2rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .site-header {
+        padding: 0.5rem 0;
+    }
+}
