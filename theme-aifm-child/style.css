@@ -7,8 +7,6 @@ Template: twentytwentyfive
 Text Domain: aifm-child
 */
 
-/* Import parent theme styles */
-@import url("../twentytwentyfive/style.css");
 
 /* Custom styles for AIFirstMovers.net */
 :root {
