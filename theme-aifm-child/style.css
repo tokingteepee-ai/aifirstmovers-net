@@ -1,0 +1,77 @@
+/*
+Theme Name: AI First Movers Child Theme
+Description: Child theme of Twenty Twenty-Five for AI First Movers Advantage website
+Author: AI First Movers Team
+Template: twentytwentyfive
+Version: 1.0.0
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: aifm-child
+*/
+
+/* Import parent theme styles */
+@import url("../twentytwentyfive/style.css");
+
+/* Custom styles for AI First Movers */
+:root {
+    --aifm-primary-color: #2563eb;
+    --aifm-secondary-color: #64748b;
+    --aifm-accent-color: #f59e0b;
+    --aifm-text-color: #1e293b;
+    --aifm-light-bg: #f8fafc;
+}
+
+/* Site header customizations */
+.site-header {
+    background-color: var(--aifm-light-bg);
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Navigation customizations */
+.main-navigation a {
+    color: var(--aifm-text-color);
+    font-weight: 500;
+}
+
+.main-navigation a:hover {
+    color: var(--aifm-primary-color);
+}
+
+/* Content area styling */
+.site-main {
+    padding: 2rem 0;
+}
+
+/* Button styling */
+.wp-block-button__link {
+    background-color: var(--aifm-primary-color);
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.wp-block-button__link:hover {
+    background-color: var(--aifm-secondary-color);
+}
+
+/* Footer styling */
+.site-footer {
+    background-color: var(--aifm-text-color);
+    color: white;
+    padding: 3rem 0 2rem;
+}
+
+.site-footer a {
+    color: #cbd5e1;
+}
+
+.site-footer a:hover {
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .site-main {
+        padding: 1rem 0;
+    }
+}
