@@ -1,0 +1,287 @@
+/**
+ * AI First Movers Core Plugin - Frontend Styles
+ *
+ * @package AIFM_Core
+ */
+
+/* Resource Grid Layout */
+.aifm-resources-grid {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.aifm-columns-1 { grid-template-columns: 1fr; }
+.aifm-columns-2 { grid-template-columns: repeat(2, 1fr); }
+.aifm-columns-3 { grid-template-columns: repeat(3, 1fr); }
+.aifm-columns-4 { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 768px) {
+    .aifm-resources-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .aifm-columns-4 { grid-template-columns: repeat(2, 1fr); }
+    .aifm-columns-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Resource Cards */
+.aifm-resource-card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.aifm-resource-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -3px rgb(0 0 0 / 0.1);
+}
+
+.aifm-resource-image {
+    overflow: hidden;
+}
+
+.aifm-resource-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.aifm-resource-card:hover .aifm-resource-image img {
+    transform: scale(1.05);
+}
+
+.aifm-resource-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.aifm-resource-title {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.aifm-resource-title a {
+    color: #1e293b;
+    text-decoration: none;
+}
+
+.aifm-resource-title a:hover {
+    color: #2563eb;
+}
+
+.aifm-resource-excerpt {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+/* Resource Meta */
+.aifm-resource-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.aifm-resource-type {
+    background-color: #2563eb;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.aifm-resource-difficulty {
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.aifm-difficulty-beginner {
+    background-color: #10b981;
+    color: white;
+}
+
+.aifm-difficulty-intermediate {
+    background-color: #f59e0b;
+    color: white;
+}
+
+.aifm-difficulty-advanced {
+    background-color: #ef4444;
+    color: white;
+}
+
+.aifm-difficulty-expert {
+    background-color: #7c3aed;
+    color: white;
+}
+
+.aifm-resource-duration {
+    background-color: #e2e8f0;
+    color: #475569;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+/* Resource Types Grid */
+.aifm-resource-types-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.aifm-resource-type-card {
+    background: #ffffff;
+    border: 2px solid;
+    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.aifm-resource-type-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+.aifm-type-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.aifm-type-title {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.aifm-type-title a {
+    text-decoration: none;
+}
+
+.aifm-type-description {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.aifm-type-count {
+    color: #64748b;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Featured Resources */
+.aifm-featured-resources {
+    margin-bottom: 2rem;
+}
+
+.aifm-style-carousel {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+}
+
+.aifm-style-carousel .aifm-featured-resource {
+    flex: 0 0 350px;
+}
+
+.aifm-featured-resource {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    overflow: hidden;
+}
+
+.aifm-featured-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.aifm-featured-content {
+    padding: 1.5rem;
+}
+
+.aifm-featured-title {
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.aifm-featured-title a {
+    color: #1e293b;
+    text-decoration: none;
+}
+
+.aifm-featured-title a:hover {
+    color: #2563eb;
+}
+
+.aifm-featured-excerpt {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.aifm-featured-link .aifm-button-primary {
+    background-color: #2563eb;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.aifm-featured-link .aifm-button-primary:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .aifm-style-carousel {
+        flex-direction: column;
+    }
+    
+    .aifm-style-carousel .aifm-featured-resource {
+        flex: none;
+    }
+    
+    .aifm-resource-content,
+    .aifm-featured-content {
+        padding: 1rem;
+    }
+    
+    .aifm-resource-type-card {
+        padding: 1.5rem 1rem;
+    }
+}

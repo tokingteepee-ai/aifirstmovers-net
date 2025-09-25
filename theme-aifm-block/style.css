@@ -1,0 +1,106 @@
+/*
+Theme Name: AI First Movers Block Theme
+Description: Custom block theme for AI First Movers Advantage website
+Author: AI First Movers Team
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.4
+Requires PHP: 8.0
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: aifm-block
+*/
+
+/*
+This theme is a block theme and styles are primarily handled through theme.json.
+Custom CSS for specific components and overrides can be added here.
+*/
+
+/* Global custom properties */
+:root {
+    --aifm-brand-primary: #2563eb;
+    --aifm-brand-secondary: #64748b;
+    --aifm-brand-accent: #f59e0b;
+    --aifm-text-primary: #1e293b;
+    --aifm-text-secondary: #475569;
+    --aifm-bg-light: #f8fafc;
+    --aifm-bg-white: #ffffff;
+    --aifm-border-light: #e2e8f0;
+    --aifm-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --aifm-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --aifm-border-radius: 8px;
+    --aifm-transition: all 0.3s ease;
+}
+
+/* Custom component styles that extend block theme capabilities */
+.aifm-hero-section {
+    background: linear-gradient(135deg, var(--aifm-brand-primary) 0%, var(--aifm-brand-secondary) 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.aifm-card {
+    background: var(--aifm-bg-white);
+    border-radius: var(--aifm-border-radius);
+    box-shadow: var(--aifm-shadow-md);
+    padding: 2rem;
+    transition: var(--aifm-transition);
+}
+
+.aifm-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -3px rgb(0 0 0 / 0.1);
+}
+
+.aifm-button-primary {
+    background-color: var(--aifm-brand-primary);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--aifm-border-radius);
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: var(--aifm-transition);
+}
+
+.aifm-button-primary:hover {
+    background-color: var(--aifm-brand-secondary);
+    color: white;
+}
+
+.aifm-section-padding {
+    padding: 4rem 0;
+}
+
+/* Accessibility improvements */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    z-index: 999999;
+    padding: 8px 16px;
+    background: var(--aifm-text-primary);
+    color: white;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    left: 6px;
+    top: 7px;
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+    }
+}
