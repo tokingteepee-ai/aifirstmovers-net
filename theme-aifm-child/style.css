@@ -1,11 +1,13 @@
 /*
-Theme Name: AIFirstMovers Child Theme
-Description: Child theme for AIFirstMovers.net based on Twenty Twenty-Five
+Theme Name: AIFirstMovers Block Theme
+Description: Block-based theme for AIFirstMovers.net
 Author: AIFirstMovers Team
 Version: 1.0.0
-Template: twentytwentyfive
-Text Domain: aifm-child
+Text Domain: aifm-block
+Requires at least: 6.6
+Requires PHP: 8.1
 */
+
 
 
 /* Custom styles for AIFirstMovers.net */
